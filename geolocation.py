@@ -30,7 +30,7 @@ spark = SparkSession.builder.appName("Geolocation Parser").config("spark.driver.
 locationSchema = StructType([StructField('postcode',StringType(),nullable=True),StructField('latitude',DoubleType(),nullable=True),StructField('longitude',DoubleType(),nullable=True),StructField('district',StringType(),nullable=True),StructField('city',StringType(),nullable=True),StructField('county',StringType(),nullable=True)])
 
 #reads in geolocation csv file into memory
-location = spark.read.csv('/home/sparkuser/recommender_system/geolocation.csv', locationSchema).createOrReplaceTempView('location');
+location = spark.read.csv('/home/sparkuser/recommender_system/datasets/geolocation.csv', locationSchema).createOrReplaceTempView('location');
 spark.table('location').cache()
 
 #reads in business dataset from SQL into memory

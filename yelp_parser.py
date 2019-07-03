@@ -47,9 +47,9 @@ singleUserSchema = StructType([StructField('user_id', LongType(),nullable=True),
 convertedtoUDF = udf(nonasciitoascii)
 
 #read in the three datasets
-review = spark.read.json("/home/sparkuser/recommender_system/review.json", reviewSchema)
-user = spark.read.json("/home/sparkuser/recommender_system/user.json", userSchema)
-business = spark.read.json("/home/sparkuser/recommender_system/business.json").select("business_id","name","categories","review_count","stars","attributes.Alcohol","attributes.DogsAllowed","attributes.GoodForKids","attributes.RestaurantsGoodForGroups","attributes.RestaurantsPriceRange2","attributes.WheelchairAccessible")
+review = spark.read.json("/home/sparkuser/recommender_system/datasets/review.json", reviewSchema)
+user = spark.read.json("/home/sparkuser/recommender_system/datasets/user.json", userSchema)
+business = spark.read.json("/home/sparkuser/recommender_system/datasets/business.json").select("business_id","name","categories","review_count","stars","attributes.Alcohol","attributes.DogsAllowed","attributes.GoodForKids","attributes.RestaurantsGoodForGroups","attributes.RestaurantsPriceRange2","attributes.WheelchairAccessible")
 
 #remove non ascii-characters
 business = business.withColumn('nameConverted', convertedtoUDF(business.name))
