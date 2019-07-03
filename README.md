@@ -5,7 +5,7 @@ The project recommends restaurants to users based on their location and filterin
 to increase execution times by running the computations in memory. Two recommendation filtering approaches are used which are collaborative (based on other users' 
 ratings of the restaurants) and content-based (based on the characteristics of a restaurant).
 
-The front-end for the recommender system is a mobile application which can be found at ****
+The front-end for the recommender system is a mobile application which can be found at <a href="https://github.com/iantmc87/Location-Based-Recommender-System-Application">Location-Based-Recommender-System-Application</a>
 
 <hr>
 
