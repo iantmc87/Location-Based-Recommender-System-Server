@@ -13,7 +13,7 @@ The front-end for the recommender system is a mobile application which can be fo
 <ul><li>One or more connected linux servers (original setup 6 * 32GB servers - 1 Master & Slaves)</li>
 <li>LAMP stack installed on each server with Ubuntu 16.04 Server Edition (MySQL & PHP)</li>
 <li>Each server with the same credentials - Username = sparkuser & Password = password (Can be different but log-in details need changing in credentials.py and db_connect.php files)</li>
-<li>Datbase created on the master server called recommender_system</li>
+<li>Database created on the master server called recommender_system</li>
 <li>Latest version of Apache Spark downloaded and installed following the guide in apache_spark.txt</li>
 <li>Business, Review and User datasets downloaded and extracted from yelp.com dataset challenge</li></ul>
 
